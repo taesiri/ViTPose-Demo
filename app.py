@@ -105,10 +105,10 @@ def predict():
     return current_app.response_class(
         response=json.dumps({
             'det_preds': det_preds,
-            'detection_visualization': detection_visualization_base64,
+            'detection_visualization_img': detection_visualization_base64,
             'json_detect': json_detect,
             'pose_preds': pose_preds,
-            'pose_visualization': pose_visualization_base64,
+            'pose_visualization_img': pose_visualization_base64,
             'json_pose': json_pose,
         }, default=default),
         mimetype=current_app.json.mimetype
